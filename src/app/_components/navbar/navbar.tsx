@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@nextui-org/button";
 import {
   Navbar,
   NavbarBrand,
@@ -29,14 +28,7 @@ export default function Navigation() {
     }
   }, [currentPath]);
 
-  const menuItems = [
-    "Features",
-    "Generator",
-    "Pricing",
-    "Help & Feedback",
-    "Profile",
-    "Log Out",
-  ];
+  const menuItems = ["Features", "Generator", "Help & Feedback"];
 
   return (
     <Navbar
@@ -53,7 +45,7 @@ export default function Navigation() {
         />
         <NavbarBrand>
           <Link href={"/"} className="font-bold text-inherit">
-            BackgroundBlendr
+            SongSuggest GPT
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -66,17 +58,12 @@ export default function Navigation() {
           <Link href="/generator">Generator</Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/pricing">Pricing</Link>
+          <Link href="/how-it-works">How it works</Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} href="#" variant="flat">
-            Sign Up
-          </Button>
+          <Link href="#">Help & Feedback</Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
