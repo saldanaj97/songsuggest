@@ -1,5 +1,5 @@
-import { type Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
+import { type Config } from "tailwindcss/types/config";
 
 export default {
   content: [
@@ -12,9 +12,14 @@ export default {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       colors: {
-        primary: "#223240",
+        primary: "#F97C5C",
         secondary: "#3B8C66",
         action: "#DD4A50",
+
+        bittersweet: "#F97C5C",
+        amaranth: "#EA2A4F",
+        "midnight-blue": "#0E2453",
+        lochmara: "#2E6A9D",
       },
     },
   },

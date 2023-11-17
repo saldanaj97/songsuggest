@@ -35,8 +35,10 @@ export default function Navigation() {
       onMenuOpenChange={setIsMenuOpen}
       maxWidth="xl"
       isBlurred={false}
-      position="static"
-      className={`${isHomePage ? "text-white" : "text-primary"}`}
+      position="sticky"
+      className={`${
+        isHomePage ? "text-white" : "text-primary"
+      } top-0 z-50 bg-transparent`}
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -54,8 +56,13 @@ export default function Navigation() {
         <NavbarItem>
           <Link href="/features">Features</Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link href="/generator">Generator</Link>
+        <NavbarItem isActive>
+          <Link
+            href="/generator"
+            className="to-amaranth from-bittersweet bg-gradient-to-b bg-clip-text text-transparent"
+          >
+            Generator
+          </Link>
         </NavbarItem>
         <NavbarItem>
           <Link href="/how-it-works">How it works</Link>
